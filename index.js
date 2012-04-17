@@ -1,3 +1,5 @@
+var gravatar = require("gravatar");
+
 /**
  * Check that the string is one of the valid options
  * 
@@ -19,7 +21,7 @@ var validateDefault = validateOption('404', 'mm', 'identicon', 'monsterid', 'wav
 
 /**
  * Strategy to use email to retrieve and check gravatar url
- * If you want this strategy to fall through to other strategies, it must specify a default of 404.
+ * If you want this strategy to fall through to other strategies, it must use a default of 404.
  * 
  * @param [opts] {object} optional options for the request.
  * @param [opts.email] {string} the property of the user object containing the email default: "email"
@@ -43,7 +45,7 @@ module.exports = function(opts){
   var gravOpts = {s:opts.size, r:opts.rating, d:opts.default};
   if(opts.forcedefault)gravOpts.f = "y";
   return function(user, callback){
-    if(user[opts.email]) callback(require("gravatar").url(user[opts.email], gravOpts, (opts.useHTTPs !== false)));
+    if(user[opts.email]) callback(gravatar.url(user[opts.email], gravOpts, (opts.useHTTPs !== false)));
     else callback();
   };
 };

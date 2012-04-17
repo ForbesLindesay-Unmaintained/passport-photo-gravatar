@@ -1,0 +1,13 @@
+{
+  "name": "passport-photo-gravatar",
+  "version": "0.0.1-beta1",
+  "description": "Passport-Photo strategy for retrieving gravatar profile pictures.",
+  "main": "./index",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Tuskan360/passport-photo-gravatar.git"
+  },
+  "dependencies": {
+    "gravatar":"1.0.x"
+  }
+}
