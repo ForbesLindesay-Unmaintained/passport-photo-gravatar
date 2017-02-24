@@ -1,5 +1,7 @@
 # Passport Photo Gravatar
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/ForbesLindesay/passport-photo-gravatar.svg)](https://greenkeeper.io/)
+
 ## Installation
 
     npm install passport-photo-gravatar
